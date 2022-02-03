@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/91d96dc762.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum</title>
+  </head>
+
+  <body>
+    <div class="body__body">
+      <header>
+        <form
+          class="serach"
+          action="http://www.google.co.kr/search"
+          method="GET"
+        >
+          <i class="fas fa-search"></i>
+          <button type="submit" style="display: none"></button>
+          <input class="search__input" type="text" name="query" value="" />
+        </form>
+
+        <div class="weather">
+          <div>
+            <span id="weather__icon"></span>
+            <span id="weather__temp"></span>
+          </div>
+          <span id="weather__city"></span>
+        </div>
+      </header>
+
+      <section class="clock">
+        <h2 class="clock__digital" id="clock__digital">00:00</h2>
+        <h2 class="clock__classic hidden" id="clock__classic">
+          <div class="clock-in">
+            <div class="hand hour-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand sec-hand"></div>
+          </div>
+        </h2>
+        <div class="clock__button">
+          <input
+            type="checkbox"
+            id="clockbtn"
+            value="ON"
+            onclick="Buttontoggle();"
+          />
+          <label for="clockbtn"><span></span></label>
+        </div>
+      </section>
+
+      <form id="user-name" class="hidden">
+        <input
+          id="user-name__input"
+          class="hidden"
+          required
+          maxlength="15"
+          type="text"
+        />
+        <label for="user-name__input" class="hidden"
+          >Please write your name here</label
+        >
+        <button>Enter</button>
+      </form>
+
+      <section class="greetings">
+        <div id="greeting_time" class="hidden"></div>
+        <div id="greeting" class="hidden"></div>
+      </section>
+
+      <section class="todo-list">
+        <form id="todo-form">
+          <h>What is your main focus for today?</h>
+          <input type="text" required />
+        </form>
+        <ul id="todo-li"></ul>
+      </section>
+
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!--body__body end-->
+
+    <script src="js/greetings.js"></script>
+    <script src="js/classicclock.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
+</html>

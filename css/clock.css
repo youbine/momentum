@@ -1,0 +1,102 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+}
+
+.clock__digital {
+  text-align: center;
+  margin-top: 30vh;
+  margin-bottom: 0.5%;
+  color: white;
+  font-size: 10rem;
+  font-weight: 500;
+  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.clock__classic {
+  margin-top: 10vh;
+  width: 20rem;
+  height: 20rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.clock-in {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.clock:hover .clock__button {
+  opacity: 0.8;
+}
+
+.clock__button input {
+  display: none;
+}
+
+.clock__button {
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+.clock__button label {
+  display: block;
+  position: absolute;
+  width: 2.4%;
+  height: 2.6%;
+  border-radius: 20px;
+  background-color: #ddd;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.clock__button label span {
+  position: absolute;
+  z-index: 1;
+  width: 48%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  transition-duration: 0.2s;
+}
+
+input:checked + label {
+  background-color: #00c73c;
+}
+
+input:checked + label span {
+  transform: translateX(100%);
+}

@@ -1,7 +1,11 @@
 # Momentum Clone Coding
 
-* ### **Search Button**    
-  google 검색 기능 구현
+* #### **Random background pictures**  
+* #### **Ramdon quotes**
+* #### **Search button**    
+* #### **2 types clocks**
+* #### **To do lists**  
+* #### **Current weather from your location**  
 
 
 click 🖱[here](https://youbine.github.io/momentum/)🖱 to see my Momentum. 
